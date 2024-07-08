@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+int countWords(string sentence) {
+    // Using stringstream to split the sentence into words
+    stringstream ss(sentence);
+    string word;
+    int count = 0;
+
+    // Counting words
+    while (ss >> word) {
+        count++;
+    }
+
+    return count;
+}
+
+int main() {
+    string sentence;
+
+    // Input from user
+    cout << "Enter a sentence: ";
+    getline(cin, sentence);
+
+    // Count words
+    int wordCount = countWords(sentence);
+
+    // Output the result
+    cout << "Number of words in the sentence: " << wordCount << endl;
+
+    return 0;
+}
