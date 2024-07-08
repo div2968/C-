@@ -1,0 +1,57 @@
+#include <iostream>
+#include <cmath> // For math functions like pow()
+
+int main() {
+    int choice;
+    std::cout << "Choose a shape to calculate area:\n";
+    std::cout << "1. Circle\n";
+    std::cout << "2. Square\n";
+    std::cout << "3. Rectangle\n";
+    std::cout << "4. Triangle\n";
+    std::cout << "Enter your choice (1-4): ";
+    std::cin >> choice;
+
+    switch (choice) {
+        case 1: {
+            // Calculate area of circle
+            double radius, areaCircle;
+            const double PI = 3.141592653589793;
+            std::cout << "Enter radius of the circle: ";
+            std::cin >> radius;
+            areaCircle = PI * pow(radius, 2);
+            std::cout << "Area of the circle: " << areaCircle << std::endl;
+            break;
+        }
+        case 2: {
+            // Calculate area of square
+            double side, areaSquare;
+            std::cout << "Enter side length of the square: ";
+            std::cin >> side;
+            areaSquare = side * side;
+            std::cout << "Area of the square: " << areaSquare << std::endl;
+            break;
+        }
+        case 3: {
+            // Calculate area of rectangle
+            double length, width, areaRectangle;
+            std::cout << "Enter length and width of the rectangle: ";
+            std::cin >> length >> width;
+            areaRectangle = length * width;
+            std::cout << "Area of the rectangle: " << areaRectangle << std::endl;
+            break;
+        }
+        case 4: {
+            // Calculate area of triangle
+            double base, height, areaTriangle;
+            std::cout << "Enter base and height of the triangle: ";
+            std::cin >> base >> height;
+            areaTriangle = 0.5 * base * height;
+            std::cout << "Area of the triangle: " << areaTriangle << std::endl;
+            break;
+        }
+        default:
+            std::cout << "Invalid choice. Please enter a number between 1 to 4." << std::endl;
+    }
+
+    return 0;
+}
