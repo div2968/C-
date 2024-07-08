@@ -1,0 +1,38 @@
+#include <iostream>
+
+void printCharacters() {
+    // Print numbers 0-9
+    std::cout << "Numbers:" << std::endl;
+    for (int i = 0; i < 10; ++i) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl << std::endl;
+
+    // Print uppercase alphabets
+    std::cout << "Uppercase Alphabets:" << std::endl;
+    for (char ch = 'A'; ch <= 'Z'; ++ch) {
+        std::cout << ch << " ";
+    }
+    std::cout << std::endl << std::endl;
+
+    // Print lowercase alphabets
+    std::cout << "Lowercase Alphabets:" << std::endl;
+    for (char ch = 'a'; ch <= 'z'; ++ch) {was
+        std::cout << ch << " ";
+    }
+    std::cout << std::endl << std::endl;
+
+    // Print special characters
+    std::cout << "Special Characters:" << std::endl;
+    for (char ch = ' '; ch <= '~'; ++ch) {
+        if (!std::isalnum(ch)) { // Check if the character is alphanumeric
+            std::cout << ch << " ";
+        }
+    }
+    std::cout << std::endl;
+}
+
+int main() {
+    printCharacters();
+    return 0;
+}
