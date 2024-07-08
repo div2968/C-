@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+// Function to calculate string length
+int myStrlen(const char* str) {
+    int length = 0;
+    
+    // Loop through each character until the null terminator '\0' is encountered
+    while (str[length] != '\0') {
+        length++;
+    }
+    
+    return length;
+}
+
+int main() {
+    const char* str = "Hello, World!";
+
+    // Calculate string length using myStrlen function
+    int length = myStrlen(str);
+
+    // Output the length of the string
+    cout << "Length of the string '" << str << "' is: " << length << endl;
+
+    return 0;
+}
